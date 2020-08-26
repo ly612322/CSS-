@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="http://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <input type="checkbox" name="" id="select">
+    <div class="card">
+        <label for="select" id="select_lable"></label>
+        <div class="img"></div>
+        <h2 class="title">SNOWMAN</h2>
+        <p class="desc">Hooray! It's snowing! It's time to make a snowman.James runs out. He makes a big pile of
+            snow. He puts a big snowball on top. He adds a scarf and a hat. He adds an orange for the nose. He adds
+            coal for the eyes and buttons.In the evening, James opens the door. What does he see?</p>
+        <div class="content">
+            <p>
+                Hooray! It's snowing! It's time to make a snowman.James runs out. He makes a big pile of
+                snow. He puts a big snowball on top. He adds a scarf and a hat. He adds an orange for the nose. He adds
+                coal for the eyes and buttons.In the evening, James opens the door. What does he see?
+                Hooray! It's snowing! It's time to make a snowman.James runs out. He makes a big pile of
+                snow. He puts a big snowball on top. He adds a scarf and a hat. He adds an orange for the nose. He adds
+                coal for the eyes and buttons.In the evening, James opens the door. What does he see?
+            </p>
+            <br>
+            <p>
+                Hooray! It's snowing! It's time to make a snowman.James runs out. He makes a big pile of
+                snow. He puts a big snowball on top. He adds a scarf and a hat. He adds an orange for the nose. He adds
+                coal for the eyes and buttons.In the evening, James opens the door. What does he see?
+                Hooray! It's snowing! It's time to make a snowman.James runs out. He makes a big pile of
+                snow. He puts a big snowball on top. He adds a scarf and a hat. He adds an orange for the nose. He adds
+                coal for the eyes and buttons.In the evening, James opens the door. What does he see?
+            </p>
+            <br>
+            <p>
+                Hooray! It's snowing! It's time to make a snowman.James runs out. He makes a big pile of
+                snow. He puts a big snowball on top. He adds a scarf and a hat. He adds an orange for the nose. He adds
+                coal for the eyes and buttons.In the evening, James opens the door. What does he see?
+                Hooray! It's snowing! It's time to make a snowman.James runs out. He makes a big pile of
+                snow. He puts a big snowball on top. He adds a scarf and a hat. He adds an orange for the nose. He adds
+                coal for the eyes and buttons.In the evening, James opens the door. What does he see?
+            </p>
+            <br>
+            <p>
+                Hooray! It's snowing! It's time to make a snowman.James runs out. He makes a big pile of
+                snow. He puts a big snowball on top. He adds a scarf and a hat. He adds an orange for the nose. He adds
+                coal for the eyes and buttons.In the evening, James opens the door. What does he see?Hooray! It's
+                snowing! It's time to make a snowman.James runs out. He makes a big pile of
+                snow. He puts a big snowball on top. He adds a scarf and a hat. He adds an orange for the nose. He adds
+                coal for the eyes and buttons.In the evening, James opens the door. What does he see?
+            </p>
+        </div>
+        <div class="icon">
+            <i class="fa fa-bookmark" ></i>
+            <i class="fa fa-facebook-official" ></i>
+            <i class="fa fa-twitter" ></i>
+            <i class="fa fa-instagram" ></i>
+        </div>
+    </div>
+</body>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 100vh;
+        background-color: #dcdde1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+    }
+
+    input[type=checkbox] {
+        display: none;
+    }
+
+    .card {
+        width: 400px;
+        height: 600px;
+        background-color: #ffffff;
+        box-shadow: 0 0 50px 10px rgba(0, 0, 0, .3);
+        transition: all .6s;
+        text-align: center;
+
+    }
+
+     .img {
+        width: 400px;
+        height: 230px;
+        transition: all .6s;
+        background-size: contain;
+        background: url('./img/百叶窗/3.jpg')no-repeat center center;
+        background-size: cover;
+
+    }
+
+     .title {
+        margin: 30px 0 15px 0;
+        font-size: 30px;
+        color: rgb(88, 88, 88);
+        transition: all .6s;
+        transition-delay: .2s;
+    }
+
+     .desc {
+        padding: 0 30px;
+        width: 400px;
+        margin-bottom: 20px;
+        line-height: 25px;
+        opacity: 1;
+        color: rgb(170, 170, 170);
+    }
+
+     .content {
+        display: none;
+        height: 1300px;
+        text-align: center;
+        padding: 0 20%;
+        line-height: 40px;
+        background-color: #ffffff;
+
+    }
+
+     .content p {
+        margin: 30px 0;
+        text-align: left;
+        display: table;
+
+    }
+
+    .icon {
+        width: 300px;
+        height: 30px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+
+     .icon i {
+        margin: 10px;
+        font-size: 22px;
+        color: rgb(75, 75, 75);
+    }
+
+    /* 点击放大*/
+    #select_lable {
+        display: block;
+        position: absolute;
+        width: 400px;
+        height: 600px;
+        z-index: 999;
+    }
+
+    #select:checked~.card #select_lable {
+        width: 100vw;
+        height: 100vh
+    }
+
+    #select:checked~.card {
+        width: 100vw;
+        height: 100%;
+    }
+
+    #select:checked~.card .img {
+        width: 100vw;
+        height: 650px;
+        overflow: hidden;
+    }
+
+    #select:checked~.card .title {
+        transform: translateY(-400px);
+        color: #ffffff;
+        font-size: 70px;
+    }
+
+    #select:checked~.card .desc {
+        display: none;
+        opacity: 0;
+
+    }
+
+    #select:checked~.card .icon {
+        display: none;
+    }
+
+    #select:checked~.card .content {
+        display: block;
+        animation: content 2s;
+        transform: translateY(-50px);
+
+    }
+
+    @keyframes content {
+        from {
+            opacity: 0;
+            transform: translateY(0px);
+
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(-50px);
+        }
+    }
+</style>
+
+</html>
